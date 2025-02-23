@@ -1,0 +1,23 @@
+{
+    "extends": "../core/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": "src",
+        "types": ["node"],
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "allowImportingTsExtensions": true,
+        "allowArbitraryExtensions": true,
+        "customConditions": ["@elizaos/source"]
+    },
+    "ts-node": {
+        "esm": true,
+        "experimentalSpecifiers": true,
+        "moduleTypes": {
+            "**/*.ts": "esm"
+        }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
